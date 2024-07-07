@@ -60,3 +60,7 @@ class Database:
         results = cursor.fetchall()
         #conn.close()
         return [dict(row) for row in results]
+
+
+    def close_connection(self):
+        self.db.close()
